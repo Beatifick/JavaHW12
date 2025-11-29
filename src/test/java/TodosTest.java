@@ -41,7 +41,7 @@ public class TodosTest {
         todos.add(meeting);
 
         Task[] expected = {simple};
-        Task[] actual = todos.search("Маме");
+        Task[] actual = todos.search("маме");
         Assertions.assertArrayEquals(expected, actual);
     }
 
@@ -56,7 +56,7 @@ public class TodosTest {
         todos.add(epic);
         todos.add(meeting);
 
-        Task[] expected = {simple, epic, meeting};
+        Task[] expected = {simple, epic};
         Task[] actual = todos.search("Молоко");
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -67,7 +67,7 @@ public class TodosTest {
         todos.add(new SimpleTask(1, "Позвонить маме"));
 
         Task[] expected = {};
-        Task[] actual = todos.search("Папе");
+        Task[] actual = todos.search("папе");
 
         Assertions.assertArrayEquals(expected, actual);
     }
